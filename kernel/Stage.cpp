@@ -127,8 +127,8 @@ void Stage::Fetch() {
     }
     else {
         char temp_icode_ifun = memory.fetchChar(f_pc);
-        f_icode = (temp_icode_ifun & (char)0xF0) >> 4;
-        f_ifun = temp_icode_ifun & (char)0xF;
+        f_icode = (temp_icode_ifun & 0xF0) >> 4;
+        f_ifun = temp_icode_ifun & 0xF;
 
         if(!instr_valid)
             f_stat = SINS;
