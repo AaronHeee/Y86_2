@@ -40,12 +40,12 @@ void D_register::update(bool D_bubble, bool D_stall, char f_stat,char f_icode, c
     }
     else
         {
-            icode = INOP;
-            ifun=FNONE;
-            rA=RNONE;
-            rB=RNONE;
-            valC=0;
-            valP=0;
+                icode = INOP;
+                ifun=FNONE;
+                rA=RNONE;
+                rB=RNONE;
+                valC=0;
+                valP=0;
     }
 }
 

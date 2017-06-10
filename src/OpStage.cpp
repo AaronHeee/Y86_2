@@ -27,9 +27,11 @@ void f_stage::fetch(Memory &read){
         temp_icode_ifun=read.fetchChar(pc);
         temp_icode=(temp_icode_ifun&0xF0)>>4;
         temp_ifun=temp_icode_ifun&0xF;
-        icode=imem_error?INOP:temp_icode;
-        ifun=imem_error?FNONE:temp_ifun;
     }
+
+    icode=imem_error?INOP:temp_icode;
+    ifun=imem_error?FNONE:temp_ifun;
+
     instr_valid=true;
     if((icode<IHALT||icode>IPOPL)||(icode==IOPL&&(ifun<FNONE||ifun>XORL))||((icode==IJXX||icode==IRRMOVL)&&(ifun<JMP||ifun>JG))) instr_valid=false;
 
