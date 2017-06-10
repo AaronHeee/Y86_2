@@ -46,7 +46,7 @@ int main() {
 
     cout<<endl<<"Instruction Memory:"<<endl;
 
-    char filename[] = "/home/aaron/Desktop/y86-code/abs-asum-jmp.ys";
+    char filename[] = "/home/aaron/Desktop/y86-code/asumr.ys";
     ifstream in(filename);
     ifstream in_temp(filename);
 
