@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11   CMakeFiles/kernel.dir/main.cpp.o CMakeFiles/kernel.dir/Stage.cpp.o CMakeFiles/kernel.dir/ALU.cpp.o CMakeFiles/kernel.dir/MemFile.cpp.o CMakeFiles/kernel.dir/Assembler.cpp.o CMakeFiles/kernel.dir/RegFile.cpp.o CMakeFiles/kernel.dir/server.cpp.o  -o kernel -lpthread 
