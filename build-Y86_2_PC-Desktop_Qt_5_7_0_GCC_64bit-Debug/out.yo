@@ -1,0 +1,53 @@
+                    | # Modification of asum code to compute absolute values of entries.
+                    | # This version uses a conditional jump
+                    | # Execution begins at address 0
+0x000:              | 	.pos 0
+0x000: 30f400010000 | init:	irmovl Stack, %esp  	# Set up Stack pointer
+0x006: 30f500010000 | 	irmovl Stack, %ebp  	# Set up base pointer
+0x00c: 7024000000   | 	jmp Main		# Execute main program
+                    | 
+                    | # Array of 4 elements
+0x014:              | 	.align 4
+0x014: 0d000000     | array:	.long 0x0000000d
+0x018: 40ffffff     | 	.long 0xffffff40 # -0xc0
+0x01c: 000b0000     | 	.long 0x00000b00
+0x020: 0060ffff     | 	.long 0xffff6000 # -0xa0000
+                    | 
+0x024: 30f004000000 | Main:	irmovl $4,%eax
+0x02a: a00f         | 	pushl %eax	# Push 4
+0x02c: 30f214000000 | 	irmovl array,%edx
+0x032: a02f         | 	pushl %edx      # Push array
+0x034: 803f000000   | 	call AbsSum	# Sum(array, 4)
+0x039: 00           | 	halt
+                    | 
+                    | /* $begin abs-sum-jmp-ys 0 */
+                    | 	# int AbsSum(int *Start, int Count)
+                    | AbsSum:
+0x03f: a05f         | 	pushl %ebp
+0x041: 2045         | 	rrmovl %esp,%ebp
+0x043: 501508000000 | 	mrmovl 8(%ebp),%ecx 	# ecx = Start
+0x049: 50250c000000 | 	mrmovl 12(%ebp),%edx	# edx = Count
+0x04f: 30f000000000 | 	irmovl $0, %eax		# sum = 0
+0x055: 6222         | 	andl   %edx,%edx
+0x057: 7388000000   | 	je     End
+                    | Loop:
+0x05c: 506100000000 | 	mrmovl (%ecx),%esi      # get x = *Start
+0x062: 30f700000000 | 	irmovl $0,%edi		# 0
+0x068: 6167         | 	subl %esi,%edi		# -x
+0x06a: 7171000000   | 	jle Pos			# Skip if -x <= 0
+0x06f: 2076         | 	rrmovl %edi,%esi	# x = -x
+                    | Pos:  
+0x071: 6060         | 	addl %esi,%eax          # add x to sum
+0x073: 30f304000000 | 	irmovl $4,%ebx          # 
+0x079: 6031         | 	addl %ebx,%ecx          # Start++
+0x07b: 30f3ffffffff | 	irmovl $-1,%ebx	        # 
+0x081: 6032         | 	addl %ebx,%edx          # Count--
+0x083: 745c000000   | 	jne    Loop             # Stop when 0
+                    | End:	
+0x088: b05f         | 	popl %ebp
+0x08a: 90           | 	ret
+                    | /* $end abs-sum-jmp-ys 0 */
+0x100:              | 	.pos 0x100
+0x100:              | Stack:	# The stack goes here
+                    | /* $end code-ysa */
+                    | /* $end code-yso */

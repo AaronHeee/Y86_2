@@ -862,7 +862,7 @@
     <property name="geometry">
      <rect>
       <x>1120</x>
-      <y>630</y>
+      <y>580</y>
       <width>81</width>
       <height>51</height>
      </rect>
@@ -873,7 +873,7 @@
      </font>
     </property>
     <property name="text">
-     <string>▼</string>
+     <string>▲</string>
     </property>
    </widget>
    <widget class="QPushButton" name="Bu_START">
@@ -1883,7 +1883,7 @@
     <property name="geometry">
      <rect>
       <x>1120</x>
-      <y>580</y>
+      <y>630</y>
       <width>81</width>
       <height>51</height>
      </rect>
@@ -1894,7 +1894,7 @@
      </font>
     </property>
     <property name="text">
-     <string>▲</string>
+     <string>▼</string>
     </property>
    </widget>
   </widget>

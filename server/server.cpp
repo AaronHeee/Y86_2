@@ -111,7 +111,7 @@ int main(int argc, char **argv) {
     printf("\nStart the server...\n");
 
     printf("\nsleep time = %d\n", sec);
-        /* socket */
+    /* socket */
 
     int serv_sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP); //create skocket
 
@@ -125,7 +125,12 @@ int main(int argc, char **argv) {
 
     bind(serv_sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr)); //bind the skocket and the IP & port
 
-    listen(serv_sock, SOMAXCONN);
+    int lstn = listen(serv_sock, SOMAXCONN);
+    if (lstn == -1) {
+        lstn = listen(serv_sock, SOMAXCONN);
+//        perror("listen");
+//        exit(-1);
+    }
 
     printf("\nwaiting for you ...\n\n");
 

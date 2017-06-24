@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named kernel
+# Target rules for targets named server
 
 # Build rule for target.
-kernel: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 kernel
-.PHONY : kernel
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
 
 # fast build rule for target.
-kernel/fast:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/build
-.PHONY : kernel/fast
+server/fast:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
 
 ALU.o: ALU.cpp.o
 
@@ -129,7 +129,7 @@ ALU.o: ALU.cpp.o
 
 # target to build an object file
 ALU.cpp.o:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/ALU.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ALU.cpp.o
 .PHONY : ALU.cpp.o
 
 ALU.i: ALU.cpp.i
@@ -138,7 +138,7 @@ ALU.i: ALU.cpp.i
 
 # target to preprocess a source file
 ALU.cpp.i:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/ALU.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ALU.cpp.i
 .PHONY : ALU.cpp.i
 
 ALU.s: ALU.cpp.s
@@ -147,7 +147,7 @@ ALU.s: ALU.cpp.s
 
 # target to generate assembly for a file
 ALU.cpp.s:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/ALU.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ALU.cpp.s
 .PHONY : ALU.cpp.s
 
 Assembler.o: Assembler.cpp.o
@@ -156,7 +156,7 @@ Assembler.o: Assembler.cpp.o
 
 # target to build an object file
 Assembler.cpp.o:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/Assembler.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Assembler.cpp.o
 .PHONY : Assembler.cpp.o
 
 Assembler.i: Assembler.cpp.i
@@ -165,7 +165,7 @@ Assembler.i: Assembler.cpp.i
 
 # target to preprocess a source file
 Assembler.cpp.i:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/Assembler.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Assembler.cpp.i
 .PHONY : Assembler.cpp.i
 
 Assembler.s: Assembler.cpp.s
@@ -174,7 +174,7 @@ Assembler.s: Assembler.cpp.s
 
 # target to generate assembly for a file
 Assembler.cpp.s:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/Assembler.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Assembler.cpp.s
 .PHONY : Assembler.cpp.s
 
 MemFile.o: MemFile.cpp.o
@@ -183,7 +183,7 @@ MemFile.o: MemFile.cpp.o
 
 # target to build an object file
 MemFile.cpp.o:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/MemFile.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/MemFile.cpp.o
 .PHONY : MemFile.cpp.o
 
 MemFile.i: MemFile.cpp.i
@@ -192,7 +192,7 @@ MemFile.i: MemFile.cpp.i
 
 # target to preprocess a source file
 MemFile.cpp.i:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/MemFile.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/MemFile.cpp.i
 .PHONY : MemFile.cpp.i
 
 MemFile.s: MemFile.cpp.s
@@ -201,7 +201,7 @@ MemFile.s: MemFile.cpp.s
 
 # target to generate assembly for a file
 MemFile.cpp.s:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/MemFile.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/MemFile.cpp.s
 .PHONY : MemFile.cpp.s
 
 RegFile.o: RegFile.cpp.o
@@ -210,7 +210,7 @@ RegFile.o: RegFile.cpp.o
 
 # target to build an object file
 RegFile.cpp.o:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/RegFile.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/RegFile.cpp.o
 .PHONY : RegFile.cpp.o
 
 RegFile.i: RegFile.cpp.i
@@ -219,7 +219,7 @@ RegFile.i: RegFile.cpp.i
 
 # target to preprocess a source file
 RegFile.cpp.i:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/RegFile.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/RegFile.cpp.i
 .PHONY : RegFile.cpp.i
 
 RegFile.s: RegFile.cpp.s
@@ -228,7 +228,7 @@ RegFile.s: RegFile.cpp.s
 
 # target to generate assembly for a file
 RegFile.cpp.s:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/RegFile.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/RegFile.cpp.s
 .PHONY : RegFile.cpp.s
 
 Stage.o: Stage.cpp.o
@@ -237,7 +237,7 @@ Stage.o: Stage.cpp.o
 
 # target to build an object file
 Stage.cpp.o:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/Stage.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Stage.cpp.o
 .PHONY : Stage.cpp.o
 
 Stage.i: Stage.cpp.i
@@ -246,7 +246,7 @@ Stage.i: Stage.cpp.i
 
 # target to preprocess a source file
 Stage.cpp.i:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/Stage.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Stage.cpp.i
 .PHONY : Stage.cpp.i
 
 Stage.s: Stage.cpp.s
@@ -255,35 +255,8 @@ Stage.s: Stage.cpp.s
 
 # target to generate assembly for a file
 Stage.cpp.s:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/Stage.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/Stage.cpp.s
 .PHONY : Stage.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 server.o: server.cpp.o
 
@@ -291,7 +264,7 @@ server.o: server.cpp.o
 
 # target to build an object file
 server.cpp.o:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/server.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.cpp.o
 .PHONY : server.cpp.o
 
 server.i: server.cpp.i
@@ -300,7 +273,7 @@ server.i: server.cpp.i
 
 # target to preprocess a source file
 server.cpp.i:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/server.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.cpp.i
 .PHONY : server.cpp.i
 
 server.s: server.cpp.s
@@ -309,7 +282,7 @@ server.s: server.cpp.s
 
 # target to generate assembly for a file
 server.cpp.s:
-	$(MAKE) -f CMakeFiles/kernel.dir/build.make CMakeFiles/kernel.dir/server.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.cpp.s
 .PHONY : server.cpp.s
 
 # Help Target
@@ -320,7 +293,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... kernel"
+	@echo "... server"
 	@echo "... ALU.o"
 	@echo "... ALU.i"
 	@echo "... ALU.s"
@@ -336,9 +309,6 @@ help:
 	@echo "... Stage.o"
 	@echo "... Stage.i"
 	@echo "... Stage.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"

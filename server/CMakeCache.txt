@@ -114,7 +114,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=kernel
+CMAKE_PROJECT_NAME:STATIC=server
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -166,10 +166,10 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-kernel_BINARY_DIR:STATIC=/home/aaron/Desktop/Y86_2/server
+server_BINARY_DIR:STATIC=/home/aaron/Desktop/Y86_2/server
 
 //Value Computed by CMake
-kernel_SOURCE_DIR:STATIC=/home/aaron/Desktop/Y86_2/server
+server_SOURCE_DIR:STATIC=/home/aaron/Desktop/Y86_2/server
 
 
 ########################

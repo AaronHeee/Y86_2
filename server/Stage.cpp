@@ -116,7 +116,7 @@ void Stage::Fetch() {
     /* Read instruction */
     imem_error = f_pc > M_MAX;
     instr_valid = !((f_icode < IHALT || f_icode > IPOPL) || (f_icode == IOPL && (f_ifun < FNONE || f_ifun > XORL)) ||
-            (( f_icode == IJXX || f_icode == IRRMOVL) && (f_ifun < JMP || f_ifun > JG)));
+                    (( f_icode == IJXX || f_icode == IRRMOVL) && (f_ifun < JMP || f_ifun > JG)));
 
     if (imem_error) {
         f_stat = SADR;
@@ -446,10 +446,10 @@ void Stage::Register_Control() {
               (E_dstM == d_srcA || E_dstM == d_srcB);
 
     D_bubble = ( E_icode == IJXX && !e_Cnd ) || !(  (E_icode == IMRMOVL || E_icode == IPOPL) &&
-               (E_dstM == d_srcA || E_dstM == d_srcB) )  && ( D_icode == IRET || E_icode == IRET || M_icode == IRET);
+                                                    (E_dstM == d_srcA || E_dstM == d_srcB) )  && ( D_icode == IRET || E_icode == IRET || M_icode == IRET);
 
     E_bubble = (E_icode == IJXX && !e_Cnd) || ( (E_icode == IMRMOVL|| E_icode == IPOPL) &&
-               (E_dstM == d_srcA || E_dstM == d_srcB));
+                                                (E_dstM == d_srcA || E_dstM == d_srcB));
 
     M_bubble = (m_stat == SADR || m_stat == SINS || m_stat == SHLT) ||
                (W_stat == SADR || W_stat == SINS || W_stat == SHLT);

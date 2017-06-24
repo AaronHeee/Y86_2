@@ -5,14 +5,14 @@
       <sourceFolder url="file://$MODULE_DIR$/Assembler.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ALU.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Stage.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MemFile.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Stage.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/RegFile.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MemFile.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/server.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/MemFile.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/RegFile.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/RegFile.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Assembler.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ALU.h" isTestSource="false" />
     </content>

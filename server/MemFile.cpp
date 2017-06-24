@@ -66,7 +66,7 @@ void MemFile::read(std::ifstream &in){
 void MemFile::copy(char *buffer) {
     clear();
     for (int i=0; i<M_MAX; i++)
-            mem[i] = buffer[i];
+        mem[i] = buffer[i];
 }
 
 void MemFile::clear(){

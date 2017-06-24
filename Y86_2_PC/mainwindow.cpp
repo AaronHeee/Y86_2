@@ -248,8 +248,8 @@ void * Receive(void *fd) {
 int clk=0;
 
 void MainWindow::cycleDisplay(){
-    if(now->stat==SHLT) {timer->stop();return;}
-     if(client.update > clk)
+    if(now->stat == SHLT) {timer->stop();return;}
+    if(client.update > clk)
          displayAll(++clk);
 }
 
@@ -258,7 +258,7 @@ void MainWindow::openText(){
     QFile file(f);
     QTextStream in(&file);
     ui->textBrowser->setText(in.readAll());
-}
+}   
 
 void MainWindow::on_actionOpen_o_triggered()
 {
@@ -320,4 +320,9 @@ void MainWindow::on_Sl_speed_valueChanged(int value)
 void MainWindow::on_Bu_BACK_clicked()
 {
     if(clk > 0) displayAll(--clk);
+}
+
+void MainWindow::on_Sl_speed_rangeChanged(int min, int max)
+{
+    return;
 }
